@@ -74,23 +74,6 @@ public class ConcurrentProofGeneration {
 			return this.bverifyserver.queryRecordsByFilter(this.filter);
 		}
 		
-		public CategoricalQueryProof constructQueryProofLock() throws ProofError{
-			CategoricalQueryProof proof;
-			// what b_verify used to use
-			synchronized(this.bverifyserver) {
-				proof = this.bverifyserver.queryRecordsByFilter(this.filter);
-			}
-			return proof;
-		}
-		
-		
-	}
-
-	@Benchmark
-	@Group("query_proof_multiple_threads_regular_lock")
-	@GroupThreads(10)
-	public CategoricalQueryProof query_proof_multiple_threads_regular_lock(RequestProof state) throws ProofError {
-		return state.constructQueryProofLock();
 	}
 	
 	@Benchmark

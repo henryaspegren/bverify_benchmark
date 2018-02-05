@@ -1,0 +1,6 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit"
+"org.bverify.throughput.ConcurrentProofGeneration.query_proof_multiple_threads_reader_writer_lock","avgt",10,200,146.823195,2.217540,"ms/op"
+"org.bverify.throughput.SingleThreadedProofGeneration.request_aggregation_proof","avgt",1,200,0.056776,0.000269,"ms/op"
+"org.bverify.throughput.SingleThreadedProofGeneration.request_categorical_proof","avgt",1,200,32.585696,0.721376,"ms/op"
+"org.bverify.throughput.SingleThreadedProofGeneration.request_consistency_proof","avgt",1,200,0.968767,0.006595,"ms/op"
+"org.bverify.throughput.SingleThreadedProofGeneration.request_record_proof","avgt",1,200,0.906539,0.005320,"ms/op"
